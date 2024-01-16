@@ -1,0 +1,11 @@
+$primary-color: #143261;
+$text-color: rgb(249, 249, 249);
+
+
+.welcome-header {
+    color: $text-color; 
+    text-align: center;
+    background-color: $primary-color;
+    margin: auto;
+    padding: 1rem;
+  }

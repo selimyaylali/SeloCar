@@ -1,0 +1,98 @@
+.login-page-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3f4f6;
+  padding-bottom: 6rem;
+
+  > .auth-container {
+    text-align: center;
+    margin-top: 2rem;
+
+    .google-auth-button {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #fff;
+      color: #000;
+      font-size: 1rem; // Use rem for scalable font size
+      font-weight: 600;
+      margin: 3rem auto;
+      border: 2px solid #000000;
+      padding: 10px 15px;
+      width: 100%; // Flexible width
+      max-width: 16rem; // Maximum width
+      box-shadow: 0 3px 6px 0 #ccc;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #f1f1f1;
+        border-color: rgb(156, 6, 6);
+        transition: ease-in-out 0.3 s;
+      }
+    }
+
+    .divider {
+      margin: 2rem 0;
+    }
+
+    .auth-options {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 10rem; // Adjusted for responsiveness
+    }
+  }
+
+  .google-icon {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .error {
+    color: #ef4444;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 48rem) {
+  .login-page-container {
+    flex-direction: column; // Stack elements vertically on smaller screens
+    padding-bottom: 3rem; // Reduced padding
+
+    > .auth-container {
+      margin-top: 1rem; // Adjust margin
+
+      .google-auth-button {
+        padding: 8px 12px; // Adjust padding
+        margin: 2rem auto; // Adjust margin
+      }
+
+      .auth-options {
+        flex-direction: column; // Stack elements vertically
+        gap: 1rem; // Adjust gap size
+      }
+    }
+
+    .google-icon {
+      height: 1.5rem; // Adjust icon size
+      width: 1.5rem;
+    }
+  }
+}
+
+@media (max-width: 30rem) {
+  .login-page-container {
+    padding-bottom: 2rem; // Further reduce padding for very small screens
+
+    css Copy code > .auth-container {
+      .google-auth-button {
+        font-size: 0.9rem; // Smaller font size for very small screens
+      }
+
+      .auth-options {
+        gap: 0.5rem; // Smaller gap for very small screens
+      }
+    }
+  }
+}

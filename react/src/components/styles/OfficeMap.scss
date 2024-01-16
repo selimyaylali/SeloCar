@@ -1,0 +1,56 @@
+.office-map-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%; // Ensure the container does not overflow the width of the screen
+  margin: 0 auto; // Center the container if it's smaller than the screen width
+
+  .office-details,
+  #map {
+    flex: 1 1 20%; // Take up half the width of the container
+    min-width: 300px; // Minimum width before wrapping
+
+    &:first-child {
+      padding-right: 10px; // Add some spacing between the details and the map
+    }
+  }
+
+  .office-details {
+    background-color: #fff; // White background for the details
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // A subtle shadow
+
+    h1 {
+      margin-top: 0;
+      color: #d2232a; // Red color for the office name heading
+    }
+
+    p {
+      margin: 5px 0;
+      color: #333; // Dark grey for the text
+    }
+  }
+
+  #map {
+    height: 400px; // Fixed height for the map
+    background-color: #eaeaea;
+    @media (max-width: 768px) {
+      height: 300px;
+    }
+  }
+}
+
+// Responsive behavior
+@media (max-width: 768px) {
+  .office-map-container {
+    flex-direction: column; // Stack the office details and map on top of each other
+
+    .office-details,
+    #map {
+      flex-basis: 100%; // Each child takes full width of the container
+    }
+
+    .office-details {
+      padding-bottom: 20px; // Add some space between the details and the map
+    }
+  }
+}

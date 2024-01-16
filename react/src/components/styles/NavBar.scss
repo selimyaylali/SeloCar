@@ -1,0 +1,88 @@
+$primary-color: rgb(61, 137, 115);
+$hover-color: #45a187;
+$text-color: rgb(238, 238, 238);
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $primary-color;
+  padding: 0 15px;
+  height: 70px;
+  
+  &.center-logo {
+    justify-content: center; 
+  }
+
+  .navbar-logo-centered {
+    margin: 0 auto; 
+    height: 48px;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 5px;
+      &:hover {
+    background-color: $hover-color;
+    transition: ease-in-out 0.2s;
+  }
+  }
+  
+}
+
+.navbar-logo {
+  height: 48px;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: $hover-color;
+    transition: ease-in-out 0.2s;
+  }
+}
+
+.login-section {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 0.75rem;
+
+  .login-text {
+    margin-right: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: $text-color;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -5px;
+      left: 50%;
+      background-color: $text-color;
+      transition: width 0.3s ease, left 0.3s ease;
+    }
+  }
+
+  &:hover .login-text::after {
+    width: 100%;
+    left: 0;
+  }
+}
+
+.navbar-login-icon {
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  margin-right: 10px;
+  fill: $text-color;
+  align-items: center;
+  justify-content: center;
+}

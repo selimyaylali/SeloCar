@@ -1,0 +1,73 @@
+.car-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 16px;
+  width: 300px; // You can adjust this based on your layout needs
+
+  .car-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .car-info {
+    padding: 16px;
+    text-align: center;
+
+    .car-make-model {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .car-specs {
+      font-size: 1rem;
+      margin-bottom: 16px;
+
+      .spec-item {
+        margin: 4px 0;
+      }
+    }
+
+    .car-rental-details {
+      font-size: 1rem;
+      margin-bottom: 16px;
+
+      .detail-item {
+        margin: 4px 0;
+      }
+    }
+  }
+
+  .rent-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 0 0 8px 8px;
+    width: 100%;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    &:hover {
+      background-color: darken(#4caf50, 10%);
+    }
+  }
+}
+
+// Responsive styling if needed
+@media (max-width: 768px) {
+  .car-card {
+    width: 100%;
+    margin: 16px 0;
+    .rent-button {
+      padding: 10px 20px;
+    }
+  }
+}
